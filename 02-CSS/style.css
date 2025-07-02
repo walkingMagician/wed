@@ -3,16 +3,46 @@
 body
 {   
     font-family: Roboto Condensed;
-    font-size: 20px;
+    font-size: 18px;
+    width:750px;
 }
 p
 {
     text-align: justify;
 }
+li
+{
+    margin-bottom: 18px;
+}
 figure
 {
-    
     text-align: center;
     font-style: italic;
     font-size: 16px;
+}
+
+/*таблица*/
+#table-container table thead th
+{
+    background-color: blueviolet;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    padding: 10px 12px;
+    text-align: center;
+}
+#table-container table th[title='Field #9']
+{
+    background-color: blueviolet;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;  
+}
+#table-container tbody td
+{
+    border: 1px solid blueviolet;
+    padding: 10px 15px;
+    text-align: center;
 }
