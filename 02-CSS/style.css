@@ -11,9 +11,13 @@ p
 {
     text-align: justify;
 }
-li
+.list_navigation li > ul
 {
-    margin-bottom: 18px;
+    list-style-type: none;
+}
+.list_U li
+{
+    margin-bottom:  18px;
 }
 figure
 {
@@ -21,6 +25,24 @@ figure
     font-style: italic;
     font-size: 16px;
 }
+a
+{
+    color: blue;
+}
+a:visited
+{
+    color: darkblue;
+}
+a:hover
+{
+    color: darkmagenta;
+    font-weight: 800;
+}
+
+/*
+element:pseudo-class{}
+element::pseudo-element{}
+*/
 
 /*таблица*/
 #table-container table thead th
