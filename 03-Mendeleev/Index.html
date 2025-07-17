@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+    <title>Периодическая таблица Менделеева</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Периодическая таблица Менделеева</h1>
+    
+    <div id="table-container">
+        <!-- Таблица загрузится сюда через JS -->
+        <p>Загрузка таблицы...</p>
+    </div>
+
+    <script>
+        // Загружаем таблицу из внешнего файла
+        fetch("tableMendeleev.htm")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Файл не найден");
+                }
+                return response.text();
+            })
+            .then((html) => {
+                document.getElementById("table-container").innerHTML = html;
+            })
+            .catch((error) => {
+                console.error("Ошибка:", error);
+                document.getElementById("table-container").innerHTML =
+                    "<p>Не удалось загрузить таблицу.</p>";
+            });
+    </script>
+</body>
+</html>
