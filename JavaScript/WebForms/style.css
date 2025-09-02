@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body
+{   
+    font-family: Roboto Condensed;
+    font-size: 18px;
+    width:750px;
+    margin: auto;
+}
+p
+{
+    text-align: justify;
+}
+.list_navigation li > ul
+{
+    list-style-type: none;
+}
+.list_U li
+{
+    margin-bottom:  18px;
+}
+figure
+{
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
+a
+{
+    color: blue;
+}
+a:visited
+{
+    color: darkblue;
+}
+a:hover
+{
+    color: darkmagenta;
+    font-weight: 800;
+}
+
+/*
+element:pseudo-class{}
+element::pseudo-element{}
+*/
+
+/*таблица*/
+
+#table-container table
+{
+    border-collapse: collapse; 
+}
+#table-container thead th
+{
+    border: 1px solid black;
+    background-color: blueviolet;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+/*#table-container th[title='Field #1']
+{
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}*/
+
+#table-container th[title='Field #9']
+{
+    background-color: blueviolet;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;  
+}
+
+#table-container tbody td
+{
+    border: 1px solid black;
+    padding: 10px 15px;
+    text-align: center;
+}

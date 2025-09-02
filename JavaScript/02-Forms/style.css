@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body
+{
+    font-family: Roboto Condensed;
+    font-size: 32px;
+}
+#header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#switch-background
+{
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    /*background-image: url("Image/moon.png");*/
+}
+
+.light
+{
+    background: #d8d8d8;
+    color: #323232;
+}
+
+.light #switch-background
+{
+    background-image: url("Image/moon.png");
+}
+
+.dark
+{
+    background: #323232;
+    color:#d8d8d8;   
+}
+
+.dark #switch-background
+{
+    filter: brightness(0) invert(1);
+    background-image: url("Image/sun.png");
+}
+
+form
+{
+    border: solid 3px;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 5%;
+    box-shadow: 0px 0px 5p 5px gray;
+}
+
+.pair
+{
+    /*border: solid 1px;*/
+    width: 50%;
+    display: flex;
+    justify-content:  space-between;
+    padding: 1px;
+    margin: 1px;
+}
+
+#power-form input
+{
+    width: 24%;
+}
+
+input[type=checkbox], input[type=radio]
+{
+    width: 16px;
+    height: 16px;
+}
+
+input/*[type=number]*/ ,select
+{
+    font-size: 16px;
+}
+
+fieldset
+{
+    width: 50%;
+}
+
+#registration
+{
+    display: flex;
+}
+
+#upload-photo
+{
+    border: solid 1px;
+    width: 40vh;
+    height: 60vh;
+}
