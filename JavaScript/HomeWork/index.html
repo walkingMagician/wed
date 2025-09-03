@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HomeWork</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>HomeWork</h1>
+
+    <div class="controls">
+    <select id="figureSelector" onchange="handleFigureSelection()">
+        <option disabled selected="selected"> --- Выбор фигуры ---</option>
+        <option value="square">квадрат 5x5</option>
+        <option value="triangle_right">треугольник вправо</option>
+        <option value="triangle_left">треугольник влево</option>
+        <option value="invert_triangle_right">перевёрнутый треугольник вправо</option>
+        <option value="invert_triangle_left">перевёрнутый треугольник влево</option>
+        <option value="romb">ромб</option>
+        <option value="chess_plus_minus">узор +-</option>
+        <option value="chess">шахматная доска</option>
+    </select>
+
+    <div class="chess-control" id="chessControl" style="display: none;">
+        <label for="chessSize">Размер доски:</label>
+        <input type="number" id="chessSize" min="2" max="20" value="8" onchange="updateChessBoard()">
+    </div>
+
+    <div class="chess-control" id="diamondControl" style="display: none;">
+        <label for="diamondSize">Размер ромба:</label>
+        <input type="number" id="diamondSize" min="3" max="20" value="5" onchange="drawDiamondPrecise()">
+    </div>
+
+    <div class="chess-control" id="patternControl" style="display: none;">
+        <label for="patternSize">Размер узора:</label>
+        <input type="number" id="patternSize" min="2" max="20" value="5" onchange="drawChessboard()">
+    </div>
+</div>
+
+    <div id="figureName" class="figure-name"></div>
+
+    <div class="grid-container">
+        <div class="grid" id="grid">
+            <!-- через java script -->
+        </div>
+    </div>
+
+    <script src="function.js"></script>
+</body>
+</html>
