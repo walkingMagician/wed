@@ -31,8 +31,8 @@ function UploadPhoto(input)
         
         reader.onload = function(e) {
             photo.src = e.target.result;
-            photo.alt = "Фото студента";
-            photo.title = "Фото студента";
+            photo.alt = "Фото";
+            photo.title = "Фото";
         }
         
         reader.readAsDataURL(input.files[0]);
