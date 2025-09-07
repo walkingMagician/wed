@@ -136,6 +136,16 @@ fieldset
     object-fit: cover;
 }
 
-#upload-photo img:hover {
+#upload-photo img:hover 
+{
     opacity: 0.8;
+}
+
+/* time */
+
+#clock
+{
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
 }
