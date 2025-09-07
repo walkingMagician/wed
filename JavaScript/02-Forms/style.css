@@ -25,7 +25,7 @@ body
 
 .light #switch-background
 {
-    background-image: url("img/moon.png");
+    background-image: url("Image/moon.png");
 }
 
 .dark
@@ -37,17 +37,49 @@ body
 .dark #switch-background
 {
     filter: brightness(0) invert(1);
-    background-image: url("img/sun.png");
+    background-image: url("Image/sun.png");
 }
 
-
-form
+.form-container
 {
-    border:solid 1px;
-    border-radius:10px;
-    margin:5%;
-    padding:5%;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 5%;
     box-shadow: 0px 0px 15px 15px grey;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-header h3 {
+    margin: 0;
+}
+
+.toggle-icon {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-content {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+}
+
+.form-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 .pair
@@ -87,9 +119,12 @@ fieldset
 
 #upload-photo
 {
-    border:solid 1px;
-    width:59vh;
-    height:80vh;
+    width: 38vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #upload-photo img
@@ -97,4 +132,10 @@ fieldset
     border: solid 1px;
     width:  38vh;
     height: 58vh;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+#upload-photo img:hover {
+    opacity: 0.8;
 }
