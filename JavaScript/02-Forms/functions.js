@@ -68,3 +68,47 @@ function addLeadingZero(number)
 {
     return number < 10 ? "0" + number : number;
 }
+
+document.getElementById("btn-start").onclick = function startCoundownTimer()
+{
+    let targetDateControl = document.getElementById("target-date");
+    let targetTimeControl = document.getElementById("target-time");
+    let btnStart = document.getElementById("btn-start");
+    targetDateControl.disabled = targetTimeControl.disabled = !targetDateControl.disabled;
+    if (btnStart.value === "Start")
+    {
+        btnStart.value = "Stop";
+        tickCountdown();
+        //document.getElementById("target-date-value").innerHTML = targetDateControl.valueAsDate;
+        //document.getElementById("target-time-value").innerHTML = targetTimeControl.valueAsDate;
+    }
+    else
+    {
+        btnStart.value = "Start";
+        document.getElementById("target-date-value").innerHTML = "weiting...";
+        document.getElementById("target-time-value").innerHTML = "weiting...";
+    }
+}
+
+function tickCountdown()
+{
+    if (!document.getElementById("target-time").disabled) return;
+    let now = new Date();
+    let targetDateControl = document.getElementById("target-date");
+    let targetTimeControl = document.getElementById("target-time");
+    let targetDate = targetDateControl.valueAsDate;
+    let targetTime = targetTimeControl.valueAsTime;
+
+    // выравнивание часового пояса 
+    targetDate.setHours(targetDate.getHours() + targetDate.getTimezoneOffset()/60);
+    targetTime.setHours(targetTime.getHours() + targetTime.getTimezoneOffset()/60);
+    
+    // сводим даты и время в одну переменную 
+    targetTime.setFullyear(targetDate.getFullYear());
+    targetTime.setMonth(targetDate.getMonth());
+    targetTime.setDatr(targetDate.getDate());
+
+    
+    document.getElementById("target-date-value").innerHTML = targetDate;
+    document.getElementById("target-time-value").innerHTML = targetTime;
+}
